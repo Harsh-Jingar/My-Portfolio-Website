@@ -59,7 +59,7 @@ document.addEventListener('visibilitychange',
     function () {
         if (document.visibilityState === "visible") {
             document.title = "Portfolio | Harsh Jingar";
-            $("#favicon").attr("href", "assets/images/favicon.png");
+            $("#favicon").attr("href", "assets/images/myimage.jpg");
         }
         else {
             document.title = "Come Back To Portfolio";
