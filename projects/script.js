@@ -21,7 +21,7 @@ document.addEventListener('visibilitychange',
     function () {
         if (document.visibilityState === "visible") {
             document.title = "Projects | Portfolio Harsh Jingar";
-            $("#favicon").attr("href", "/assets/images/myimage.jpg");
+            $("#favicon").attr("href", "/assets/images/myprofile.jpg");
         }
         else {
             document.title = "Come Back To Portfolio";
@@ -47,7 +47,7 @@ function showProjects(projects) {
         projectsHTML += `
         <div class="grid-item ${project.category}">
         <div class="box tilt" style="width: 380px; margin: 1rem">
-      <img draggable="false" src="/assets/images/projects/${project.image}.png" alt="project" />
+      <img draggable="false" src="./assets/images/projects/${project.image}.png" alt="project" />
       <div class="content">
         <div class="tag">
         <h3>${project.name}</h3>
@@ -117,21 +117,3 @@ var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
 })();
 // End of Tawk.to Live Chat
 
-// disable developer mode
-document.onkeydown = function (e) {
-    if (e.keyCode == 123) {
-        return false;
-    }
-    if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
-        return false;
-    }
-    if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
-        return false;
-    }
-    if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
-        return false;
-    }
-    if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
-        return false;
-    }
-}
