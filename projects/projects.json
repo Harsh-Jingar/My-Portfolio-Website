@@ -1,5 +1,15 @@
 [
   {
+    "name": "Shree DeepRekha Traders Website",
+    "desc": "Shree DeepRekha Traders is a professional business website designed to showcase a diverse range of plastic household products. It features a responsive design, SEO optimization, and a user-friendly interface, including an automatic product slider and engaging content. The website was developed using modern web technologies to create a streamlined and visually appealing platform tailored for business growth and customer engagement.",
+    "image": "website",
+    "category": "professionalweb",
+    "links": {
+      "view": "https://shreedeeprekhatraders.com",
+      "code": "#"
+    }
+  },
+  {
     "name": "Secure Login System",
     "desc": "Secure Login System is a robust authentication and verification system designed to enhance security for web applications. It features user login with mandatory email verification, session management, and secure data handling, all built using Java Servlets, JSP, and MySQL on an Apache Tomcat Server. The system follows the MVC architecture and centralizes all tasks within a single servlet for streamlined operation.",
     "image": "login",

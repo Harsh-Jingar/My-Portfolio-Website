@@ -333,7 +333,9 @@ header .navbar ul li a:hover {
     margin-top: 12rem;
   }
   .home .image img {
-    margin-top: -12rem;
+    margin-top: -25rem;
+    width: 90%;
+    margin-left: 2rem;
   }
   .home .content p {
     font-size: 2.2rem;
@@ -757,6 +759,33 @@ header .navbar ul li a:hover {
 }
 .work .viewall .btn:hover i {
   transform: translateX(5px);
+}
+
+@media screen and (max-width: 600px) {
+  .work .box-container .box .content .tag h3 {
+    font-size: 1.5rem;
+  }
+  .work .box-container .box:hover .content {
+    top: 35%;
+  }
+  .work .desc p {
+    font-size: 1rem;
+  }
+  .work .desc .btns {
+    margin-top: 0.5rem;
+  }
+  .work .desc .btns .btn {
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+  }
+  .work .box-container .box img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+  .work .box-container .box {
+    height: 35rem;
+  }
 }
 /* work section ends */
 
