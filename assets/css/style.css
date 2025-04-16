@@ -186,6 +186,7 @@ header .navbar ul li a:hover {
   gap: 1.5rem;
   min-height: 100vh;
   align-items: center;
+  padding-top: 5rem;
 }
 .home #particles-js {
   position: absolute;
@@ -210,9 +211,13 @@ header .navbar ul li a:hover {
 .home .image {
   flex: 1 1 40rem;
   z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .home .image img {
   width: 70%;
+  max-width: 40rem;
   margin-left: 6rem;
   border-radius: 50%;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
@@ -245,7 +250,7 @@ header .navbar ul li a:hover {
 }
 .home .btn {
   margin-top: 1rem;
-  position: absolute;
+  display: inline-block;
   line-height: 0;
   padding: 1.6rem 3rem;
   border-radius: 4em;
@@ -274,7 +279,7 @@ header .navbar ul li a:hover {
 /* social icons start */
 .socials {
   position: relative;
-  margin-top: 9rem;
+  margin-top: 5rem;
 }
 .socials .social-icons {
   margin-left: 30px;
@@ -325,8 +330,43 @@ header .navbar ul li a:hover {
 /* social icons end */
 
 /* hero media queries starts*/
-@media (max-width: 450px) {
+@media (max-width: 1200px) {
+  .home .image img {
+    width: 70%;
+    margin-left: 0;
+  }
+}
 
+@media (max-width: 768px) {
+  .home {
+    flex-direction: column-reverse;
+    padding-top: 0;
+  }
+  .home .content {
+    text-align: center;
+  }
+  .home .image {
+    margin-top: 8rem;
+  }
+  .home .image img {
+    width: 60%;
+    /* max-width: 35rem; */
+    margin-left: 0;
+  }
+  .socials {
+    margin-top: 3rem;
+  }
+  .socials .social-icons {
+    margin-left: 0;
+    display: flex;
+    justify-content: center;
+  }
+  .home .btn {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 450px) {
   .home .content h2 {
     font-size: 3.5rem;
   }
@@ -334,15 +374,37 @@ header .navbar ul li a:hover {
     font-size: 3.5rem;
   }
   .home .image img {
-    margin-top: -10rem;
-    width: 90%;
-    margin-left: 2rem;
+    width: 70%;
+    margin-left: 0;
   }
-  .home .content p {
+  .home .content .auto-type1,
+  .home .content .auto-type2 {
     font-size: 2rem;
   }
-  .home .content p span {
-    font-size: 2rem;
+  .socials {
+    margin-top: 2rem;
+  }
+  .social-icons a {
+    font-size: 1.8rem;
+    line-height: 38px;
+    width: 38px;
+    height: 38px;
+  }
+}
+
+@media (max-width: 350px) {
+  .home .content h2 {
+    font-size: 2.8rem;
+  }
+  .home .content h2 span {
+    font-size: 2.8rem;
+  }
+  .home .image img {
+    width: 80%;
+  }
+  .home .content .auto-type1,
+  .home .content .auto-type2 {
+    font-size: 1.8rem;
   }
 }
 /* hero media queries ends*/
@@ -358,14 +420,19 @@ header .navbar ul li a:hover {
   gap: 2rem;
   flex-wrap: wrap;
   padding: 4rem;
+  justify-content: center;
+  align-items: center;
 }
 .about .row .image {
   text-align: center;
   flex: 1 1 35rem;
+  display: flex;
+  justify-content: center;
 }
 .about .row .image img {
-  margin: 4rem;
-  width: 30rem;
+  margin: 2rem;
+  width: 80%;
+  max-width: 35rem;
   height: auto;
   border-radius: 5%;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
@@ -401,17 +468,19 @@ header .navbar ul li a:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
+  margin-top: 2rem;
   font-family: "Nunito";
   font-weight: 600;
 }
 .about .row .content .box-container .box p {
   text-transform: none;
+  margin-top: 0;
 }
 .about .row .content .box-container .box p span {
   color: #011aff;
 }
 .resumebtn {
-  margin-top: 6rem;
+  margin-top: 4rem;
 }
 .resumebtn .btn {
   padding: 1.7rem 3rem;
@@ -438,25 +507,68 @@ header .navbar ul li a:hover {
 .resumebtn .btn:hover i {
   transform: translateX(5px);
 }
+
 /* about media queries starts*/
+@media (max-width: 1200px) {
+  .about .row {
+    padding: 3rem;
+  }
+  .about .row .image img {
+    margin: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about .row {
+    flex-direction: column;
+    padding: 2rem;
+  }
+  .about .row .image {
+    margin-top: 2rem;
+  }
+  .about .row .content {
+    padding: 2rem;
+  }
+  .about .row .content p {
+    font-size: 1.4rem;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .about .row .image {
     margin-top: 2rem;
   }
   .about .row .image img {
     margin: 0 auto;
-    width: 80%;
+    width: 75%;
+    max-width: 30rem;
     mix-blend-mode: normal;
   }
   .about .row {
     padding: 0.5rem;
-    margin-bottom: 7rem;
+    margin-bottom: 3rem;
   }
   .about .row .content {
     padding: 1rem;
   }
+  .about .row .content h3 {
+    font-size: 2.2rem;
+  }
   .about .row .content .box-container {
-    gap: 0;
+    gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .about .row .image img {
+    width: 90%;
+  }
+  .about .row .content .box-container {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .about .row .content p {
+    font-size: 1.3rem;
   }
 }
 /* about media queries ends*/
@@ -466,9 +578,12 @@ header .navbar ul li a:hover {
 .skills {
   min-height: 65vh;
   background: linear-gradient(to bottom, #57059e, #4a00e0);
+  padding-top: 2rem;
+  padding-bottom: 3rem;
 }
 .skills h2 {
   color: #fff;
+  margin-bottom: 2rem;
 }
 .skills .heading span {
   color: rgb(255, 230, 0);
@@ -478,27 +593,30 @@ header .navbar ul li a:hover {
   color: #fff;
   border-radius: 2rem;
   padding: 3rem;
-  width: 80%;
+  width: 85%;
   margin: auto;
   margin-top: 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 .skills .container .row {
   display: grid;
-  grid-template-columns: repeat(4, 2fr);
-  flex-wrap: wrap;
-  gap: 2rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.5rem;
 }
 .skills .container .bar {
   margin-bottom: 15px;
-  padding: 8px;
+  padding: 1.5rem;
   border-radius: 1rem;
   box-shadow: 0 4px 10px rgba(82, 73, 73, 0.2);
   background: rgba(0, 0, 22, 0.9);
-  transition: 0.2s;
+  transition: 0.3s;
+  text-align: center;
+  height: 100%;
 }
 .skills .container .bar:hover {
   box-shadow: 0 8px 10px rgba(0, 2, 68, 0.8) !important;
   background-color: rgba(0, 0, 0, 0.9) !important;
+  transform: translateY(-5px);
 }
 .skills .container .bar .info {
   display: flex;
@@ -510,27 +628,80 @@ header .navbar ul li a:hover {
 .skills .container .bar .info i {
   font-size: 4rem;
 }
+.skills .container .bar .info img {
+  width: 4rem;
+  height: 4rem;
+  object-fit: contain;
+}
 .skills .container .bar .info span {
   font-size: 2rem;
   font-weight: 500;
   font-family: "Poppins";
-  margin-left: 0.5rem;
+  margin-top: 0.5rem;
 }
+
 /* skills media queries starts*/
+@media (max-width: 1200px) {
+  .skills .container {
+    width: 90%;
+    padding: 2rem;
+  }
+  .skills .container .row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .skills .container {
+    width: 95%;
+    padding: 1.5rem;
+  }
+  .skills .container .row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  .skills .container .bar .info span {
+    font-size: 1.8rem;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .skills .container {
-    padding: 0;
-    margin: 0;
+    padding: 1rem;
+    margin: 1rem auto;
+    width: 100%;
   }
   .skills .container .row {
     grid-template-columns: repeat(2, 1fr);
     margin: 1rem;
-    padding: 2rem 0.2rem 2rem 0.2rem;
+    padding: 1rem 0.2rem;
     gap: 1rem;
   }
+  .skills .container .bar {
+    padding: 1rem;
+  }
+  .skills .container .bar .info i,
+  .skills .container .bar .info img {
+    font-size: 3rem;
+    width: 3rem;
+    height: 3rem;
+  }
+  .skills .container .bar .info span {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
   .skills .container {
-    margin-top: 5px;
     width: 100%;
+    padding: 0.5rem;
+  }
+  .skills .container .row {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+  }
+  .skills h2 {
+    font-size: 3rem;
   }
 }
 /* skills media queries ends*/
@@ -540,13 +711,19 @@ header .navbar ul li a:hover {
 .education {
   background: #e5ecfb;
   min-height: 65vh;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+.education .heading {
+  margin-bottom: 2rem;
 }
 .education .qoute {
   font-size: 1.5rem;
   text-align: center;
   font-family: "Nunito", sans-serif;
   font-weight: 600;
-  margin-top: 0.5rem;
+  margin: 1rem auto 3rem;
+  max-width: 80%;
 }
 .education .box-container {
   display: flex;
@@ -554,6 +731,7 @@ header .navbar ul li a:hover {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 0 2rem;
 }
 .education .box-container .box {
   display: flex;
@@ -586,7 +764,7 @@ header .navbar ul li a:hover {
   position: relative;
   display: flex;
   flex-direction: column;
-  padding: 1rem;
+  padding: 2rem;
   flex-wrap: wrap;
   flex: 1 1 70rem;
 }
@@ -596,31 +774,53 @@ header .navbar ul li a:hover {
   padding: 0.5rem 0;
   font-weight: 600;
   text-align: left;
-  margin-left: 1rem;
+  margin-left: 0;
 }
 .education .box-container .box .content p {
   font-size: 1.5rem;
-  margin-left: 1rem;
+  margin-left: 0;
   text-align: left;
 }
-.education h4 {
+.education .box-container .box .content h4 {
   font-size: 2rem;
   color: rgb(34, 109, 0);
   text-align: left;
-  margin: 1rem;
+  margin: 1rem 0;
   font-family: "Nunito", sans-serif;
   font-weight: 700;
 }
 
 /* education media queries starts*/
+@media (max-width: 1200px) {
+  .education .box-container .box {
+    width: 85%;
+  }
+}
+
+@media (max-width: 768px) {
+  .education .box-container .box {
+    width: 90%;
+    padding: 1.2rem;
+  }
+  .education .qoute {
+    max-width: 90%;
+  }
+  .education .box-container .box .content h3 {
+    font-size: 2.2rem;
+  }
+}
+
 @media screen and (max-width: 600px) {
+  .education .box-container {
+    padding: 0 0.5rem;
+  }
   .education .box-container .box {
     flex-direction: column;
     width: 100%;
   }
   .education .box-container .box .image {
     width: 100%;
-    height: 25rem;
+    height: 20rem;
   }
   .education .box-container .box img {
     width: 100%;
@@ -629,9 +829,16 @@ header .navbar ul li a:hover {
     position: relative;
     display: flex;
     flex-direction: column;
-    padding: 1rem;
+    padding: 1.5rem;
     flex-wrap: wrap;
     flex: 0;
+  }
+  .education .box-container .box .content h3 {
+    font-size: 2rem;
+  }
+  .education .box-container .box .content p,
+  .education .box-container .box .content h4 {
+    font-size: 1.4rem;
   }
   .education .btns {
     margin-top: 2rem;
@@ -639,153 +846,224 @@ header .navbar ul li a:hover {
     margin-right: 1rem;
     flex-wrap: wrap;
   }
+  .education .qoute {
+    font-size: 1.3rem;
+    margin: 0.5rem auto 2rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .education .box-container .box .content h3 {
+    font-size: 1.7rem;
+  }
+  .education .box-container .box .content p,
+  .education .box-container .box .content h4 {
+    font-size: 1.3rem;
+  }
 }
 /* education media queries ends*/
 /* education section ends */
 
 /* work section starts */
 .work {
-  /* background: #010124; */
   background: linear-gradient(to bottom, #000031, #00002c);
+  padding-top: 2rem;
+  padding-bottom: 5rem;
 }
 .work h2 {
   color: #fff;
   padding: 1rem;
+  margin-bottom: 2.5rem;
+  font-size: 3.8rem;
 }
 .work .heading span {
   color: rgb(255, 230, 0);
+  position: relative;
+}
+.work .heading span::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: rgb(255, 230, 0);
+  border-radius: 3px;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s ease;
+}
+.work .heading:hover span::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 .work .box-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  margin: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+  max-width: 1400px;
+  margin: 3rem auto;
+  padding: 0 2rem;
 }
-.work .box-container .box {
-  flex: 1 1 30rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+.work .box-container .project-card {
   position: relative;
+  border-radius: 1rem;
+  box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.4);
   overflow: hidden;
-  height: 30rem;
+  height: 28rem;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+  background: #000020;
 }
-.work .box-container .box img {
+.work .box-container .project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.5), 0 0 25px rgba(65, 58, 206, 0.4);
+}
+.work .box-container .project-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent 70%, rgba(0, 0, 0, 0.8) 100%);
+  z-index: 1;
+  transition: opacity 0.4s ease;
+}
+.work .box-container .project-card:hover::before {
+  opacity: 0.8;
+}
+.work .box-container .project-card img {
   height: 100%;
   width: 100%;
   object-fit: cover;
+  transition: transform 0.7s ease;
 }
-.work .box-container .box .content {
-  height: 100%;
-  width: 100%;
+.work .box-container .project-card:hover img {
+  transform: scale(1.1);
+}
+.work .box-container .project-card .project-title {
   position: absolute;
-  top: 85%;
+  bottom: 0;
   left: 0;
-  background: rgba(255, 255, 255, 0.9);
-  display: flex;
-  flex-direction: column;
-}
-.work .box-container .box .content .tag {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  height: 4.5rem;
   width: 100%;
-  padding-left: 1rem;
-  background: #ffd900;
-}
-.work .box-container .box .content .tag h3 {
-  font-size: 2rem;
-}
-.work .box-container .box:hover .content {
-  top: 25%;
-}
-.work .desc {
-  margin: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.work .desc p {
-  font-size: 1.5rem;
-}
-.work .desc .btns {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  margin-top: 2rem;
-}
-.work .desc .btns .btn {
-  line-height: 0;
-  display: inline;
-  padding: 1.5rem 2.5rem;
-  border-radius: 0.5rem;
-  font-size: 1.5rem;
-  color: #fff;
-  background: rgb(12, 12, 12);
-  margin-right: 2rem;
-}
-.work .desc .btns .btn:hover {
-  background: #310ae0f5;
-}
-.work .viewall {
-  display: flex;
-  justify-content: center;
-}
-.work .viewall .btn {
-  position: relative;
-  line-height: 0;
-  padding: 1.6rem 3rem;
-  border-radius: 0.5em;
-  transition: 0.5s;
-  color: rgb(255, 255, 255);
-  font-weight: 700;
-  border: 2px solid #fff;
-  box-shadow: 0px 5px 10px rgba(65, 84, 241, 0.4);
+  padding: 1.5rem;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
   text-align: center;
-}
-.work .viewall .btn span {
+  font-size: 2rem;
   font-weight: 600;
-  font-size: 1.7rem;
-  font-family: "Nunito", sans-serif;
+  z-index: 2;
+  transform: translateY(0);
+  transition: all 0.4s ease;
+  backdrop-filter: blur(4px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
-.work .viewall .btn i {
-  margin-left: 0.3rem;
+.work .box-container .project-card:hover .project-title {
+  background: rgba(17, 7, 115, 0.9);
+  color: rgb(255, 230, 0);
+  transform: translateY(0);
+}
+.work .box-container .project-card::after {
+  content: "Click to view details";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
   font-size: 1.5rem;
-  transition: 0.3s;
+  color: white;
+  background: rgba(0, 0, 31, 0.85);
+  padding: 0.8rem 1.5rem;
+  border-radius: 2rem;
+  opacity: 0;
+  z-index: 3;
+  transition: all 0.4s ease;
 }
-.work .viewall .btn:hover {
-  background: #fff;
-  color: #000;
+.work .box-container .project-card:hover::after {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
 }
-.work .viewall .btn:hover i {
-  transform: translateX(5px);
+
+/* Work section media queries */
+@media (max-width: 1400px) {
+  .work .box-container {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 2.5rem auto;
+  }
+}
+
+@media (max-width: 1200px) {
+  .work .box-container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.8rem;
+    padding: 0 2rem;
+  }
+  .work .box-container .project-card {
+    height: 25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .work {
+    padding-top: 1.5rem;
+    padding-bottom: 4rem;
+  }
+  .work h2 {
+    font-size: 3.2rem;
+    margin-bottom: 2rem;
+  }
+  .work .box-container {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+  }
+  .work .box-container .project-card {
+    height: 22rem;
+  }
+  .work .box-container .project-card .project-title {
+    padding: 1.2rem;
+    font-size: 1.8rem;
+  }
+  .work .box-container .project-card::after {
+    font-size: 1.3rem;
+    padding: 0.6rem 1.2rem;
+  }
 }
 
 @media screen and (max-width: 600px) {
-  .work .box-container .box .content .tag h3 {
-    font-size: 1.5rem;
+  .work h2 {
+    font-size: 2.8rem;
   }
-  .work .box-container .box:hover .content {
-    top: 35%;
+  .work .box-container {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    gap: 2rem;
+    padding: 0 1.5rem;
   }
-  .work .desc p {
-    font-size: 1rem;
+  .work .box-container .project-card {
+    height: 25rem;
   }
-  .work .desc .btns {
-    margin-top: 0.5rem;
+}
+
+@media screen and (max-width: 400px) {
+  .work h2 {
+    font-size: 2.5rem;
   }
-  .work .desc .btns .btn {
-    padding: 1rem 1.5rem;
-    font-size: 1rem;
+  .work .box-container {
+    padding: 0 1rem;
   }
-  .work .box-container .box img {
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
+  .work .box-container .project-card {
+    height: 22rem;
   }
-  .work .box-container .box {
-    height: 35rem;
+  .work .box-container .project-card .project-title {
+    padding: 1rem;
+    font-size: 1.6rem;
+  }
+  .work .box-container .project-card::after {
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
   }
 }
 /* work section ends */

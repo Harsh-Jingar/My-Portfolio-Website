@@ -163,7 +163,57 @@ header .navbar ul li a:hover{
   text-align: center;
   font-size: 1.5rem;
   font-weight: 600;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  color: #333;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  border-left: 5px solid #2506ad;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
+.experience .quote span {
+  font-style: italic;
+  color: #2506ad;
+}
+
+/* Placeholder message styling */
+.experience .placeholder-message {
+  background-color: #fff;
+  padding: 3rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  margin: 4rem auto;
+  max-width: 800px;
+  text-align: center;
+  position: relative;
+  border-top: 4px solid #f68c09;
+  border-bottom: 4px solid #2506ad;
+}
+
+.experience .placeholder-message p {
+  font-size: 1.8rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.experience .placeholder-message:before {
+  content: "\f0b1";
+  font-family: 'Font Awesome\ 5 Free';
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  color: #2506ad;
+  font-size: 2rem;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
 .experience .timeline {
   position: relative;
   max-width: 1200px;

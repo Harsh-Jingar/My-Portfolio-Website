@@ -1,12 +1,65 @@
 [
   {
-    "name": "Shree DeepRekha Traders Website",
-    "desc": "Shree DeepRekha Traders is a professional business website designed to showcase a diverse range of plastic household products. It features a responsive design, SEO optimization, and a user-friendly interface, including an automatic product slider and engaging content. The website was developed using modern web technologies to create a streamlined and visually appealing platform tailored for business growth and customer engagement.",
-    "image": "website",
-    "category": "professionalweb",
+    "name": "TimeTable Management System",
+    "desc": "A comprehensive web-based application built using JSP, Servlets, Apache Tomcat, and MySQL that simplifies the management of academic schedules with real-time attendance tracking. The system supports three roles: Admin, Faculty, and Students, each with specific functionalities. It prevents scheduling conflicts and ensures concurrency-free operations across all user interactions.",
+    "image": "timetable",
+    "category": "basicweb",
+    "date": "March 2023",
+    "videoId": "https://youtu.be/v5E9qqzp1X8?si=SHuQMLVTn0dNbKTC",
+    "techStack": ["Java", "JSP", "Servlets", "MySQL", "HTML", "CSS", "Apache Tomcat"],
+    "features": [
+      "Multi-role system supporting Admin, Faculty, and Students",
+      "Conflict-free timetable generation preventing scheduling overlaps",
+      "Real-time attendance tracking and reporting",
+      "User management with role-based access control",
+      "Today's schedule view for quick access to current classes"
+    ],
+    "challenges": [
+      {
+        "title": "Preventing Scheduling Conflicts",
+        "solution": "Implemented validation algorithms to ensure no two lectures can be scheduled in the same period or classroom, maintaining data integrity across the system."
+      },
+      {
+        "title": "Real-time Attendance System",
+        "solution": "Developed a concurrent-safe attendance marking mechanism that prevents duplicate entries while allowing faculty to mark attendance during ongoing classes."
+      },
+      {
+        "title": "Role-based Access Control",
+        "solution": "Created a secure authentication system with differentiated access levels for admins, faculty, and students, ensuring each user can only access appropriate functionalities."
+      }
+    ],
     "links": {
-      "view": "https://shreedeeprekhatraders.com",
-      "code": "#"
+      "code": "https://github.com/Harsh-Jingar/TimeTable-Management-System"
+    }
+  },
+  {
+    "name": "Shree Deep Rekha Traders Website",
+    "desc": "Shree Deep Rekha Traders is a professional business website designed to showcase a diverse range of plastic household products. This is a complete rebuild of the older HTML/CSS/JS site into a modern, SEO-optimized, mobile-friendly, and production-ready web application using Next.js and TypeScript. The website features a responsive design, clean UI components, smooth animations, and blazing-fast performance through Vercel hosting.",
+    "image": "sdrt",
+    "category": "professionalweb",
+    "date": "January 2023",
+    "videoId": "",
+    "techStack": ["Next.js", "TypeScript", "CSS Modules", "Framer Motion", "Lucide-react", "Vercel"],
+    "features": [
+      "SEO-optimized layout with proper meta tags",
+      "Fully responsive design (Mobile, Tablet, Desktop)",
+      "Auto Image Slider for featured products",
+      "Structured product display section",
+      "Smooth navigation across sections"
+    ],
+    "challenges": [
+      {
+        "title": "Optimizing Page Load Speed",
+        "solution": "Implemented lazy loading for images and modern Next.js optimizations to improve performance, resulting in blazing-fast page loads even on slower connections."
+      },
+      {
+        "title": "Mobile Responsiveness",
+        "solution": "Created a fully responsive layout using CSS Modules to ensure optimal viewing experience across all devices from mobile phones to large desktop screens."
+      }
+    ],
+    "links": {
+      "view": "https://www.shreedeeprekhatraders.in",
+      "code": "https://github.com/Harsh-Jingar/shree-deep-rekha-traders"
     }
   },
   {
@@ -14,6 +67,26 @@
     "desc": "Secure Login System is a robust authentication and verification system designed to enhance security for web applications. It features user login with mandatory email verification, session management, and secure data handling, all built using Java Servlets, JSP, and MySQL on an Apache Tomcat Server. The system follows the MVC architecture and centralizes all tasks within a single servlet for streamlined operation.",
     "image": "login",
     "category": "basicweb",
+    "date": "October 2022",
+    "videoId": "",
+    "techStack": ["Java", "JSP", "Servlets", "MySQL", "HTML", "CSS", "JavaScript"],
+    "features": [
+      "Two-factor authentication via email verification",
+      "Session management with secure cookies",
+      "Password encryption using bcrypt hashing",
+      "User profile management system",
+      "Protection against SQL injection and XSS attacks"
+    ],
+    "challenges": [
+      {
+        "title": "Implementing Secure Authentication",
+        "solution": "Created a multi-layered authentication process with email verification and secure password storage using industry-standard encryption techniques."
+      },
+      {
+        "title": "Session Management",
+        "solution": "Developed a robust session handling mechanism that prevents session hijacking while providing a seamless user experience with appropriate timeout mechanisms."
+      }
+    ],
     "links": {
       "view": "https://drive.google.com/file/d/1nmVe6s0cqNkvqsrNxapfkJbJsN_2Qv0t/view?usp=drive_link",
       "code": "#"

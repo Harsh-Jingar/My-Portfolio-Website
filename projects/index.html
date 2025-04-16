@@ -7,77 +7,110 @@
     <link rel="stylesheet" href="./style.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link id='favicon' rel="shortcut icon" href="./assets/images/myprofile.jpg" type="image/x-png">
-    <title>Projects | Harsh Jingar</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link id='favicon' rel="shortcut icon" href="../assets/images/myprofile.jpg" type="image/x-png">
+    <title>Project Details | Harsh Jingar</title>
 </head>
 <body oncontextmenu="return false">
 
 <!-- navbar starts -->
 <header>
-        <a href="/" class="logo"><i class="fab fa-node-js"></i> Harsh Jingar</a>
+    <a href="/" class="logo"><i class="fab fa-node-js"></i> Harsh Jingar</a>
 
-        <div id="menu" class="fas fa-bars"></div>
-        <nav class="navbar">
-            <ul>
-            <li><a href="/#home">Home</a></li>
-            <li><a href="/#about">About</a></li>
-            <li><a href="/#skills">Skills</a></li>
-            <li><a href="/#education">Education</a></li>
-            <li><a class="active" href="/#work">Work</a></li>
-            <!-- <li><a href="/#experience">Experience</a></li> -->
-            <li><a href="/#contact">Contact</a></li>
-            </ul>
-        </nav>
+    <div id="menu" class="fas fa-bars"></div>
+    <nav class="navbar">
+        <ul>
+        <li><a href="/My-Portfolio-Website/#home">Home</a></li>
+        <li><a href="/My-Portfolio-Website/#about">About</a></li>
+        <li><a href="/My-Portfolio-Website/#skills">Skills</a></li>
+        <li><a href="/My-Portfolio-Website/#education">Education</a></li>
+        <li><a class="active" href="/My-Portfolio-Website/#work">Work</a></li>
+        <li><a href="/My-Portfolio-Website/#contact">Contact</a></li>
+        </ul>
+    </nav>
 </header>
 <!-- navbar ends -->
 
-<!-- work project section starts -->
-<section class="work" id="work">
-
-  <h2 class="heading"><i class="fas fa-laptop-code"></i> Projects <span>Made</span></h2>
-  
-  <div id="filters" class="button-group">
-    <button class="btn is-checked" data-filter="*">All Projects</button>
-    <!-- <button class="btn" data-filter=".mern">MERN Stack</button>
-    <button class="btn" data-filter=".lamp">LAMP Stack</button> -->
-    <button class="btn" data-filter=".basicweb">Web Application</button>
-    <!-- <button class="btn" data-filter=".android">Android App</button> -->
-  </div>
-
-  <div class="box-container">
-
-    <!-- <div class="box tilt">
-      <img src="/assets/images/projects/agecalc.PNG" alt="" />
-      <div class="content">
-        <div class="tag">
-        <h3>Portfolio Website</h3>
+<!-- project details section starts -->
+<section class="project-details" id="project-details">
+    <div id="project-container">
+        <!-- Project details will be loaded here by JavaScript -->
+        <div class="loading">
+            <i class="fas fa-spinner fa-spin"></i>
+            <p>Loading project details...</p>
         </div>
-        <div class="desc">
-          <p>Personal portfolio website. Don't need much info about it, just scroll down. You're here only!</p>
-          <div class="btns">
-            <a href="#" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
-            <a href="#" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
-          </div>
-        </div>
-      </div>
-    </div> -->   
-
-  </div>
-
-  <div class="backbtn">
-    <a href="/My-Portfolio-Website/#work" class="btn">
-        <i class="fas fa-arrow-left"></i>
-        <span>Back to Home</span>
-  </a>
-  </div>
-
+    </div>
 </section>
-<!-- work project section ends -->
+<!-- project details section ends -->
+
+<!-- project template - will be filled and shown via JS -->
+<template id="project-template">
+    <div class="project-header">
+        <h1 class="project-title"></h1>
+        <div class="project-meta">
+            <span class="project-date"><i class="far fa-calendar-alt"></i> <span class="date-text"></span></span>
+            <span class="project-category"><i class="fas fa-tag"></i> <span class="category-text"></span></span>
+        </div>
+    </div>
+
+    <div class="project-content">
+        <div class="project-media">
+            <div class="project-video">
+                <div class="video-container">
+                    <!-- YouTube video will be embedded here -->
+                </div>
+            </div>
+            <div class="project-images">
+                <img class="project-image" alt="">
+            </div>
+        </div>
+
+        <div class="project-info">
+            <div class="project-section">
+                <h2 class="section-title"><i class="fas fa-info-circle"></i> Project Overview</h2>
+                <p class="project-description"></p>
+            </div>
+
+            <div class="project-section">
+                <h2 class="section-title"><i class="fas fa-laptop-code"></i> Technologies Used</h2>
+                <ul class="tech-stack">
+                    <!-- Tech stack will be added here dynamically -->
+                </ul>
+            </div>
+
+            <div class="project-section">
+                <h2 class="section-title"><i class="fas fa-lightbulb"></i> Key Features</h2>
+                <ul class="features-list">
+                    <!-- Features will be added here dynamically -->
+                </ul>
+            </div>
+
+            <div class="project-section">
+                <h2 class="section-title"><i class="fas fa-chart-line"></i> Challenges & Solutions</h2>
+                <div class="challenges-container">
+                    <!-- Challenges and solutions will be added here -->
+                </div>
+            </div>
+        </div>
+        
+        <div class="project-actions">
+            <a href="#" class="view-btn" target="_blank"><i class="fas fa-external-link-alt"></i> View Live</a>
+            <a href="#" class="code-btn" target="_blank"><i class="fas fa-code"></i> View Code</a>
+        </div>
+    </div>
+
+    <div class="backbtn">
+        <a href="/My-Portfolio-Website/#work" class="btn">
+            <i class="fas fa-arrow-left"></i>
+            <span>Back to Projects</span>
+        </a>
+    </div>
+</template>
 
 <!-- scroll top btn -->
-<a href="#work" class="fas fa-angle-up" id="scroll-top"></a>
+<a href="#project-details" class="fas fa-angle-up" id="scroll-top"></a>
 <!-- scroll back to top -->
-
 
 <!-- ==== ALL MAJOR JAVASCRIPT CDNS STARTS ==== -->
 <!-- jquery cdn -->
@@ -88,11 +121,6 @@
 
 <!-- scroll reveal anim -->
 <script src="https://unpkg.com/scrollreveal"></script>
-
-<!-- isotope filter plugin cdn -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha512-Zq2BOxyhvnRFXu0+WE6ojpZLOU2jdnqbrM1hmVdGzyeCa1DgM3X5Q4A/Is9xA1IkbUeDd7755dNNI/PzSf2Pew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-<!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
 
 <script src="./script.js"></script>
 
