@@ -789,66 +789,50 @@ header .navbar ul li a:hover {
   font-family: "Nunito", sans-serif;
   font-weight: 700;
 }
-
-/* education media queries starts*/
-@media (max-width: 1200px) {
-  .education .box-container .box {
-    width: 85%;
-  }
+.education .box-container .box .content .grade {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
 }
 
-@media (max-width: 768px) {
+.education .box-container .box .content .grade p {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  margin-left: 0;
+  text-align: left;
+  color: #333;
+  font-weight: 600;
+}
+
+.education .box-container .box .content .grade p i {
+  color: #ffae00;
+  margin-right: 0.8rem;
+  font-size: 1.8rem;
+}
+
+.education .box-container .box .content .grade p span {
+  color: #0e2431;
+  font-weight: 700;
+  margin-left: 0.5rem;
+}
+
+@media screen and (max-width: 600px) {
   .education .box-container .box {
-    width: 90%;
-    padding: 1.2rem;
-  }
-  .education .qoute {
-    max-width: 90%;
+    width: 85%;
   }
   .education .box-container .box .content h3 {
     font-size: 2.2rem;
   }
-}
-
-@media screen and (max-width: 600px) {
-  .education .box-container {
-    padding: 0 0.5rem;
+  .education .qoute {
+    max-width: 90%;
   }
-  .education .box-container .box {
-    flex-direction: column;
-    width: 100%;
-  }
-  .education .box-container .box .image {
-    width: 100%;
-    height: 20rem;
-  }
-  .education .box-container .box img {
-    width: 100%;
-  }
-  .education .box-container .box .content {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    padding: 1.5rem;
-    flex-wrap: wrap;
-    flex: 0;
-  }
-  .education .box-container .box .content h3 {
-    font-size: 2rem;
-  }
-  .education .box-container .box .content p,
-  .education .box-container .box .content h4 {
+  .education .box-container .box .content .grade p {
     font-size: 1.4rem;
   }
-  .education .btns {
-    margin-top: 2rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    flex-wrap: wrap;
-  }
-  .education .qoute {
-    font-size: 1.3rem;
-    margin: 0.5rem auto 2rem;
+  
+  .education .box-container .box .content .grade p i {
+    font-size: 1.6rem;
   }
 }
 
@@ -859,6 +843,13 @@ header .navbar ul li a:hover {
   .education .box-container .box .content p,
   .education .box-container .box .content h4 {
     font-size: 1.3rem;
+  }
+  .education .box-container .box .content .grade p {
+    font-size: 1.3rem;
+  }
+  
+  .education .box-container .box .content .grade p i {
+    font-size: 1.5rem;
   }
 }
 /* education media queries ends*/
